@@ -25,3 +25,4 @@ I'm thankfull for suggestions if you think you can do it better ;)
 - `mullvad-vpn` (VPN)
 - `lm_sensors` & `libnotify` (CPU Info)
 
+<img width="1680" height="1050" alt="Screenshot" src="https://github.com/user-attachments/assets/11c2f3e2-e777-4a8b-b4ae-982fd12f63e2" />
