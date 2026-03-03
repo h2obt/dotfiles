@@ -12,6 +12,7 @@ I'm thankfull for suggestions if you think you can do it better ;)
 - **Terminal:** Kitty
 - **Runner:** Rofi-wayland
 - **Wallpaper:** Hyprpaper
+- **File-Manager:** Thunar
 
 ### Fonts
 - `ttf-jetbrains-mono-nerd` (Icons & Text)
