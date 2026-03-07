@@ -91,9 +91,11 @@ window#waybar {
 
 /* -----HYPRLAND WINDOW -------- */
 
-
-
-
+#window {
+    background-color: #DA70D6; /* Neon-Lila */
+    color: #000;
+    text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2, 0 0 40px #8A2BE2, 0 0 50px #8A2BE2, 0 0 60px #8A2BE2, 0 0 70px #8A2BE2;
+}
 
 
 /* --- CPU (Purple Glow) --- */
@@ -140,21 +142,6 @@ window#waybar {
     background-color: #FF1493;
     color: #000; 
     text-shadow: 0 0 10px #00F0FF, 0 0 25px #00F0FF;
-}
-
-#window {
-    font-size: 19px;          
-    font-weight: 900;
-    color: #ff0000;           
-    
-    text-shadow: 
-        -1px -1px 0 #000,     /* Rand oben links */
-         1px -1px 0 #000,     /* Rand oben rechts */
-        -1px  1px 0 #000,     /* Rand unten links */
-         1px  1px 0 #000,     /* Rand unten rechts */
-         0 0 15px #ff0000;    /* Das rote Scheppern nach außen */
-
-    padding: 0 20px;
 }
 
 
