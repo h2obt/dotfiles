@@ -12,10 +12,89 @@ window#waybar {
 
 /* Basis-Styling für alle Module */
 #cpu, #memory, #clock, #network, #bluetooth, #wireplumber, #mpris, #custom-mullvad, #window {
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 900;
     padding: 0 12px;
 }
+
+
+    
+/* Workspaces */
+#workspaces button {
+  background-color: #39FF14;
+  color: #000;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;  
+  }
+
+#workspaces button.active {
+  background: #00ff41;
+  color: #FF1493;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
+}
+
+#workspaces button:hover {
+  color: #ff006e;
+  text-shadow: 0 0 5px #ff006e;
+  box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
+}
+
+/* --- MULLVAD NEON STYLE --- */
+#custom-mullvad {
+    font-size: 20px; 
+    padding: 0 15px;
+}
+
+#custom-mullvad.connected {
+    background: #00ff41;
+    color: #0a0e27;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
+}
+
+#custom-mullvad.disconnected {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
+}
+
+/* ------ WIREPLUMBER --------- */
+/* --- WIREPLUMBER ( --- */
+#wireplumber {
+    background: #00ff41;
+    color: #0a0e27;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
+}
+
+/* --- MIKROFON (Toxic Yellow Lichtschwert) --- */
+#wireplumber.microphone {
+    color: #FFF01F; 
+    text-shadow: 0 0 10px #FFF01F, 0 0 20px #FFF01F, 0 0 30px #FFF01F;
+}
+
+
+/*-----MPRIS ----- */
+#mpris {
+    background: #00ff41;
+    color: #0a0e27;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
+}
+
+#mpris.playing {
+    background: #00ff41;
+    color: #0a0e27;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
+}
+
+#mpris.paused {
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+}
+
+/* -----HYPRLAND WINDOW -------- */
+
+
+
+
+
 
 /* --- CPU (Purple Glow) --- */
 #cpu { 
@@ -37,35 +116,6 @@ window#waybar {
     text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
-/* --- MULLVAD NEON STYLE --- */
-#custom-mullvad {
-    font-size: 20px; 
-    padding: 0 15px;
-}
-
-#custom-mullvad.connected {
-    color: #39FF14;
-    text-shadow: 0 0 10px #39FF14, 0 0 25px #a9ff14;
-}
-
-#custom-mullvad.disconnected {
-    color: #ff00ff;
-    text-shadow: 0 0 10px #ff00ff, 0 0 25px #ff00ff;
-}
-
-
-/* --- WIREPLUMBER (Orange Lichtschwert) --- */
-#wireplumber {
-    color: #FF5F1F; 
-    text-shadow: 0 0 10px #FF5F1F, 0 0 20px #FF5F1F, 0 0 30px #FF5F1F;
-}
-
-/* --- MIKROFON (Toxic Yellow Lichtschwert) --- */
-#wireplumber.microphone {
-    color: #FFF01F; 
-    text-shadow: 0 0 10px #FFF01F, 0 0 20px #FFF01F, 0 0 30px #FFF01F;
-}
-
 /* --- NETWORK (Turquoise Glow) --- */
 #network {
     background-color: #FF1493;
@@ -76,6 +126,8 @@ window#waybar {
     color: #FF003C; 
     text-shadow: 0 0 10px #FF003C, 0 0 20px #FF003C;
 }
+
+
 
 /* --- BLUETOOTH (Deep Purple / Electric Blue) --- */
 #bluetooth {
@@ -106,42 +158,5 @@ window#waybar {
 }
 
 
-#workspaces button {
-  padding: 3px 5px;
-  margin: 0 5px;
-  border-radius: 5px;
-  color: #00ff41;
-  font-weight: bold;
-  text-shadow: 0 0 5px #00ff41;
-  box-shadow: inset 0 0 5px rgba(0, 255, 65, 0.3);
-  transition: all 0.3s ease;
-}
 
-#workspaces button.active {
-  background: #00ff41;
-  color: #0a0e27;
-  text-shadow: 0 0 10px #00ff41;
-  box-shadow: 0 0 10px #00ff41, inset 0 0 10px rgba(0, 255, 65, 0.5);
-}
 
-#workspaces button:hover {
-  color: #ff006e;
-  text-shadow: 0 0 5px #ff006e;
-  box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
-}
-
-#mpris {
-    color: #FF5F1F; 
-    text-shadow: 0 0 10px #FF5F1F, 0 0 20px #FF5F1F, 0 0 30px #FF5F1F;
-}
-
-#mpris.playing {
-    color: #39FF14;
-    text-shadow: 0 0 10px #39FF14, 0 0 25px #a9ff14;
-}
-
-#mpris.paused {
-    color: #ff006e;
-  text-shadow: 0 0 5px #ff006e;
-  box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
-}
