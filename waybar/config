@@ -2,7 +2,7 @@
     "height": 40,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "mpris", "custom/mullvad"],
+    "modules-left": ["hyprland/workspaces", "custom/mullvad", "wireplumber", "mpris"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["cpu", "memory", "clock", "network", "bluetooth"],
 
@@ -39,7 +39,7 @@
         "player-icons": {
             "default": "",
             "spotify": "",
-            "firefox": ""
+            "firefox": "󰈹"
         },
         "max-length": 25,
         "on-click": "playerctl play-pause"
@@ -52,11 +52,11 @@
         "on-click": "pavucontrol"
     },
     
-    "wireplumber#microphone": {
-        "format": " {volume}%",
-        "format-muted": "",
-        "node-type": "Audio/Source"
-    }, 
+    //"wireplumber#microphone": {
+    //    "format": " {volume}%",
+    //    "format-muted": "",
+    //    "node-type": "Audio/Source"
+    //}, 
 
     "custom/mullvad": {
         "format": "{}",

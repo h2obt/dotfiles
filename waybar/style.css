@@ -5,8 +5,6 @@
 
 window#waybar {
     background-color: rgba(10, 10, 15, 0.4); 
-    
-    border-bottom: 2px solid #ff00ff; 
 
     box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
 }
@@ -21,20 +19,22 @@ window#waybar {
 
 /* --- CPU (Purple Glow) --- */
 #cpu { 
-    color: #bd00ff; 
-    text-shadow: 0 0 10px #bd00ff, 0 0 20px #ff00c8; 
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
-
 /* --- MEMORY (Cyan Glow) --- */
 #memory { 
-    color: #00f0ff; 
-    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff; 
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
 /* --- CLOCK (Magenta Glow) --- */
-#clock { 
-    color: #ff00ff; 
-    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; 
+#clock {
+    background-color: #FF1493; 
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
 /* --- MULLVAD NEON STYLE --- */
@@ -68,8 +68,9 @@ window#waybar {
 
 /* --- NETWORK (Turquoise Glow) --- */
 #network {
-    color: #08FFC8; 
-    text-shadow: 0 0 10px #08FFC8, 0 0 20px #08FFC8;
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 #network.disconnected {
     color: #FF003C; 
@@ -78,12 +79,14 @@ window#waybar {
 
 /* --- BLUETOOTH (Deep Purple / Electric Blue) --- */
 #bluetooth {
-    color: #bc13fe; 
-    text-shadow: 0 0 10px #BC13FE, 0 0 20px #BC13FE;
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
 #bluetooth.connected {
-    color: #00F0FF; 
+    background-color: #FF1493;
+    color: #000; 
     text-shadow: 0 0 10px #00F0FF, 0 0 25px #00F0FF;
 }
 
@@ -104,13 +107,12 @@ window#waybar {
 
 
 #workspaces button {
-  padding: 5px 10px;
+  padding: 3px 5px;
   margin: 0 5px;
   border-radius: 5px;
-  background: #0a0e27;
   color: #00ff41;
   font-weight: bold;
-  text-shadow: 0 0 10px #00ff41;
+  text-shadow: 0 0 5px #00ff41;
   box-shadow: inset 0 0 5px rgba(0, 255, 65, 0.3);
   transition: all 0.3s ease;
 }
@@ -118,12 +120,28 @@ window#waybar {
 #workspaces button.active {
   background: #00ff41;
   color: #0a0e27;
-  text-shadow: 0 0 20px #00ff41;
-  box-shadow: 0 0 20px #00ff41, inset 0 0 10px rgba(0, 255, 65, 0.5);
+  text-shadow: 0 0 10px #00ff41;
+  box-shadow: 0 0 10px #00ff41, inset 0 0 10px rgba(0, 255, 65, 0.5);
 }
 
 #workspaces button:hover {
   color: #ff006e;
-  text-shadow: 0 0 10px #ff006e;
+  text-shadow: 0 0 5px #ff006e;
+  box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
+}
+
+#mpris {
+    color: #FF5F1F; 
+    text-shadow: 0 0 10px #FF5F1F, 0 0 20px #FF5F1F, 0 0 30px #FF5F1F;
+}
+
+#mpris.playing {
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14, 0 0 25px #a9ff14;
+}
+
+#mpris.paused {
+    color: #ff006e;
+  text-shadow: 0 0 5px #ff006e;
   box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
 }
