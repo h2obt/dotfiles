@@ -1,38 +1,35 @@
-[{
+{
     "height": 40,
     "spacing": 5,
-
     "modules-left": ["hyprland/workspaces", "custom/mullvad", "wireplumber", "mpris"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["cpu", "memory", "clock", "network", "bluetooth"],
-
-    
     "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-        "1": "󰣇",
-        "2": "󰈹",
-        "3": "󰙯",
-        "4": "󰍳",
-        "5": "󰓓"
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰣇",
+            "2": "󰈹",
+            "3": "󰙯",
+            "4": "󰓓",
+            "5": "󰍳"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
     },
-    "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": []
-    }
-},
-
-
-
-    "hyprland/window": {
+    "custom/mullvad": {
         "format": "{}",
-        "max-length": 40,
-        "separate-outputs": true
+        "return-type": "json",
+        "exec": "/home/h2obt/.config/waybar/mullvad-status.sh",
+        "interval": 2,
+        "on-click": "mullvad connect",
+        "on-click-right": "mullvad disconnect",
+        "on-click-middle": "mullvad-vpn"
     },
-
     "mpris": {
         "format": "{player_icon} {title}",
         "format-paused": " {title}",
@@ -44,65 +41,48 @@
         "max-length": 25,
         "on-click": "playerctl play-pause"
     },
-
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-muted": "",
-        "format-icons": ["", "", ""], 
+        "format-icons": ["", "", ""],
         "on-click": "pavucontrol"
     },
-    
-    //"wireplumber#microphone": {
-    //    "format": " {volume}%",
-    //    "format-muted": "",
-    //    "node-type": "Audio/Source"
-    //}, 
-
-    "custom/mullvad": {
+    "hyprland/window": {
         "format": "{}",
-        "return-type": "json",
-        "exec": "/home/h2obt/.config/waybar/mullvad-status.sh",
-        "interval": 2,
-        "on-click": "mullvad connect",
-        "on-click-right": "mullvad disconnect",
-        "on-click-middle": "mullvad-vpn"
+        "max-length": 40,
+        "separate-outputs": true
     },
-
     "cpu": {
-    "interval": 10,
-    "format": " {icon} {usage}%",
-    "format-icons": "",
-    "on-click": "notify-send \"CPU Info\" \"$(sensors | grep 'Package id 0' | awk '{print $4}')\"",
-    "tooltip": false,
-    "exec": "echo -n ''",
-    "exec-interval": 10
+        "interval": 10,
+        "format": " {icon} {usage}%",
+        "format-icons": "",
+        "on-click": "notify-send \"CPU Info\" \"$(sensors | grep 'Package id 0' | awk '{print $4}')\"",
+        "tooltip": false,
+        "exec": "echo -n ''",
+        "exec-interval": 10
     },
-
-
     "memory": {
-    "interval": 10,
-    "format": "  {percentage}%",
-    "on-click": "kitty --title btop-float htop",
-    "tooltip": false
-},
-
-
+        "interval": 10,
+        "format": "  {percentage}%",
+        "on-click": "kitty --title btop-float htop",
+        "tooltip": false
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": "   {:%d.%m.%Y}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
     "network": {
         "format-wifi": "󰖩",
         "format-ethernet": "",
         "format-disconnected": "󰈂",
         "on-click": "nm-connection-editor"
     },
-
     "bluetooth": {
-        "format": " {status}",
-        "format-connected": " {device_alias}",
+        "format-no-controller": "󰂲",
+        "format-connected": "󰂱",
+        "format-on": "󰂰",
+        "format-off": "",
         "on-click": "blueman-manager"
-    },
-
-    "clock": {
-        "format": " {:%H:%M}",
-        "format-alt": "   {:%d.%m.%Y}",
-        "tooltip-format": "<tt>{calendar}</tt>"
     }
-}]
+}

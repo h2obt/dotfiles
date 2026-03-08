@@ -106,7 +106,7 @@ window#waybar {
 }
 
 
-/* --- CPU (Purple Glow) --- */
+/* --- CPU --- */
 #cpu { 
     background-color: #FF1493;
     color: #000;
@@ -119,7 +119,7 @@ window#waybar {
     text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
-/* --- MEMORY (Cyan Glow) --- */
+/* --- MEMORY --- */
 #memory { 
     background-color: #FF1493;
     color: #000;
@@ -166,9 +166,6 @@ window#waybar {
     text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
-
-
-
 /* --- BLUETOOTH  --- */
 #bluetooth {
     background-color: #FF1493;
@@ -178,10 +175,24 @@ window#waybar {
 
 #bluetooth.connected {
     background-color: #FF1493;
-    color: #000; 
-    text-shadow: 0 0 10px #00F0FF, 0 0 25px #00F0FF;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
+#bluetooth.on {
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+}
 
+#bluetooth.off {
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+}
 
-
+bluetooth.disabled {
+    background-color: #FF1493;
+    color: #000;
+    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+}
