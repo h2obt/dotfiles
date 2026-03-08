@@ -69,22 +69,28 @@
     },
 
     "cpu": {
-        "interval": 10,
-        "format": " {usage}%", 
-        "on-click": "notify-send \"CPU Info\" \"$(sensors | grep 'Package id 0' | awk '{print $4}')\"",
-        "tooltip": false
+    "interval": 10,
+    "format": " {icon} {usage}%",
+    "format-icons": "",
+    "on-click": "notify-send \"CPU Info\" \"$(sensors | grep 'Package id 0' | awk '{print $4}')\"",
+    "tooltip": false,
+    "exec": "echo -n ''",
+    "exec-interval": 10
     },
+
 
     "memory": {
-        "interval": 30,
-        "format": " {}%", 
-        "on-click": "kitty --title btop-float htop"
-    },
+    "interval": 10,
+    "format": "  {percentage}%",
+    "on-click": "kitty --title btop-float htop",
+    "tooltip": false
+},
+
 
     "network": {
-        "format-wifi": " {essid}",
-        "format-ethernet": "   {ifname}",
-        "format-disconnected": "⚠ Offline",
+        "format-wifi": "󰖩",
+        "format-ethernet": "",
+        "format-disconnected": "󰈂",
         "on-click": "nm-connection-editor"
     },
 
