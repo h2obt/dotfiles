@@ -4,51 +4,53 @@
 }
 
 window#waybar {
-    background-color: rgba(10, 10, 15, 0.4); 
-
+    background-color: rgba(10, 10, 15, 0.4);
     box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
 }
 
-
-/* Basis-Styling für alle Module */
-#cpu, #memory, #clock, #network, #bluetooth, #wireplumber, #mpris, #custom-mullvad, #window {
+#cpu,
+#memory,
+#clock,
+#network,
+#bluetooth,
+#wireplumber,
+#mpris,
+#custom-mullvad,
+#window {
     font-size: 16px;
     font-weight: 900;
-    padding: 0 12px;
+    padding: 0 15px;
+    margin: 0 3px;
 }
 
+/* ===== WORKSPACES ===== */
+#workspaces {
+    margin-left: 15px;
+    margin-right: 15px;
+}
 
-    
-/* Workspaces */
 #workspaces button {
-  background-color: #39FF14;
-  color: #000;
-  border-radius: 0; /* Entfernt die Rundung generell */
-  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;  
-}
-
-/* Erzwingt eckige Kanten für das erste und letzte Icon in der Liste */
-#workspaces button:first-child,
-#workspaces button:last-child {
-  border-radius: 0;
+    background-color: #39FF14;
+    color: #000;
+    border-radius: 0;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
 }
 
 #workspaces button.active {
-  background-color: #FF1493;
+    background-color: #FF1493;
     color: #000;
     text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
 #workspaces button:hover {
-  color: #ff006e;
-  text-shadow: 0 0 5px #ff006e;
-  box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
+    color: #ff006e;
+    text-shadow: 0 0 5px #ff006e;
+    box-shadow: inset 0 0 5px rgba(255, 0, 110, 0.3);
 }
 
-
-/* --- MULLVAD NEON STYLE --- */
+/* ===== MULLVAD VPN ===== */
 #custom-mullvad {
-    font-size: 20px; 
+    font-size: 20px;
     padding: 0 15px;
 }
 
@@ -63,29 +65,20 @@ window#waybar {
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
 }
 
-/* ------ WIREPLUMBER --------- */
-/* --- WIREPLUMBER ( --- */
+/* ===== WIREPLUMBER AUDIO ===== */
 #wireplumber {
     background: #00ff41;
     color: #0a0e27;
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
 }
 
-/* --- MIKROFON (Toxic Yellow Lichtschwert) --- */
 #wireplumber.microphone {
-    color: #FFF01F; 
+    color: #FFF01F;
     text-shadow: 0 0 10px #FFF01F, 0 0 20px #FFF01F, 0 0 30px #FFF01F;
 }
 
-
-/*-----MPRIS ----- */
+/* ===== MPRIS MEDIA ===== */
 #mpris {
-    background: #00ff41;
-    color: #0a0e27;
-    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
-}
-
-#mpris.playing {
     background: #00ff41;
     color: #0a0e27;
     text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14;
@@ -97,102 +90,29 @@ window#waybar {
     text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
-/* -----HYPRLAND WINDOW -------- */
-
+/* ===== ACTIVE WINDOW ===== */
 #window {
-    background-color: #DA70D6; /* Neon-Lila */
+    background-color: #DA70D6;
     color: #000;
     text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2, 0 0 40px #8A2BE2, 0 0 50px #8A2BE2, 0 0 60px #8A2BE2, 0 0 70px #8A2BE2;
 }
 
-
-/* --- CPU --- */
-#cpu { 
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-#cpu.icon {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-/* --- MEMORY --- */
-#memory { 
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-#memory.icon {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-
-/* --- CLOCK--- */
-#clock {
-    background-color: #FF1493; 
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-/* --- NETWORK  --- */
-#network {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-#network.wifi {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-
-#network.ethernet {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-#network.disconnected {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-/* --- BLUETOOTH  --- */
+/* ===== SYSTEM INFO ===== */
+#cpu,
+#memory,
+#clock,
+#network,
 #bluetooth {
     background-color: #FF1493;
     color: #000;
     text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
 }
 
-#bluetooth.connected {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+#network.disconnected {
+    opacity: 0.6;
 }
 
-#bluetooth.on {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-#bluetooth.off {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
-}
-
-bluetooth.disabled {
-    background-color: #FF1493;
-    color: #000;
-    text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+#bluetooth.off,
+#bluetooth.disabled {
+    opacity: 0.6;
 }

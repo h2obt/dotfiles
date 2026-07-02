@@ -1,9 +1,10 @@
 {
-    "height": 40,
-    "spacing": 5,
+    "height": 45,
+    "spacing": 8,
     "modules-left": ["hyprland/workspaces", "custom/mullvad", "wireplumber", "mpris"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["cpu", "memory", "clock", "network", "bluetooth"],
+    
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -21,6 +22,7 @@
             "5": []
         }
     },
+    
     "custom/mullvad": {
         "format": "{}",
         "return-type": "json",
@@ -30,6 +32,7 @@
         "on-click-right": "mullvad disconnect",
         "on-click-middle": "mullvad-vpn"
     },
+    
     "mpris": {
         "format": "{player_icon} {title}",
         "format-paused": " {title}",
@@ -41,48 +44,55 @@
         "max-length": 25,
         "on-click": "playerctl play-pause"
     },
+    
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": ["", "", ""],
         "on-click": "pavucontrol"
     },
+    
     "hyprland/window": {
         "format": "{}",
         "max-length": 40,
         "separate-outputs": true
     },
+    
     "cpu": {
         "interval": 10,
         "format": " {icon} {usage}%",
-        "format-icons": "",
+        "format-icons": "",
         "on-click": "notify-send \"CPU Info\" \"$(sensors | grep 'Package id 0' | awk '{print $4}')\"",
-        "tooltip": false,
-        "exec": "echo -n ''",
-        "exec-interval": 10
+        "tooltip": false
     },
+    
     "memory": {
         "interval": 10,
-        "format": "  {percentage}%",
+        "format": "  {percentage}%",
         "on-click": "kitty --title btop-float htop",
         "tooltip": false
     },
+    
     "clock": {
         "format": " {:%H:%M}",
         "format-alt": "   {:%d.%m.%Y}",
         "tooltip-format": "<tt>{calendar}</tt>"
     },
+    
     "network": {
-        "format-wifi": "󰖩",
-        "format-ethernet": "",
-        "format-disconnected": "󰈂",
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": " Eth",
+        "format-disconnected": "󰈂 Offline",
+        "tooltip-format": "IP: {ipaddr}\nSignal: {signalStrength}%",
         "on-click": "nm-connection-editor"
     },
+    
     "bluetooth": {
-        "format-no-controller": "󰂲",
-        "format-connected": "󰂱",
-        "format-on": "󰂰",
-        "format-off": "",
+        "format": "󰂱",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "tooltip-format": "{status}",
+        "tooltip-format-connected": "Connected: {device_enumerate}",
         "on-click": "blueman-manager"
     }
 }
